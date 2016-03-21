@@ -1,4 +1,4 @@
-class Factorio_Map < ActiveRecord::Base
+class FactorioMap < ActiveRecord::Base
   belongs_to :user
-  
+
 end
