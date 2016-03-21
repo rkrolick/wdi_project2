@@ -1,0 +1,3 @@
+class FactorioMapsController < ApplicationController
+
+end
