@@ -1,7 +1,16 @@
 <h2>Maps</h2>
 
+<div class="maps">
 <ul>
-  <% @maps.each do |m| %>
-    <li><%= m.name %></li>
+  <% @factorio_maps.each do |m| %>
+    <li><%=link_to m.name, m %></li>
   <%end%>
 </ul>
+</div>
+<div class="upload">
+  <%= form_for @factorio_map do |f| %>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+    <%=f.submit %>
+  <%end%>
+</div>
