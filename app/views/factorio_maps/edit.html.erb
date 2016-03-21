@@ -1,0 +1,6 @@
+<h1>"Editing "<%=@factorio_map.name%> </h1>
+<%= form_for @factorio_map do |f|%>
+  <%=f.label :name%>
+  <%=f.text_area :name%>
+  <%=f.submit%>
+<%end%>
