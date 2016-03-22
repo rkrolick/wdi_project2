@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   #resource :session
   #resources :users
-  resources :factorio_maps
-  #resources :comments
+  resources :factorio_maps, except: [:new] do
+    resources :comments
+  end
+
+
 end

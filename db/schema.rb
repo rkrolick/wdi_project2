@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321173508) do
+ActiveRecord::Schema.define(version: 20160321205402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string  "comment_text"
+    t.integer "factorio_map_id"
+  end
+
+  add_index "comments", ["factorio_map_id"], name: "index_comments_on_factorio_map_id", using: :btree
 
   create_table "factorio_maps", force: :cascade do |t|
     t.string "name"
   end
 
+  add_foreign_key "comments", "factorio_maps"
 end

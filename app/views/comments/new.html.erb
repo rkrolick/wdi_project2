@@ -1,0 +1,6 @@
+<h1>New comment for post <%=@comment.factorio_map.name%></h1>
+<%=form_for [@factorio_map, @comment] do |f| %>
+  <%=f.label :comment_text%>
+  <%=f.text_area :comment_text%>
+  <%=f.submit%>
+<%end%>
