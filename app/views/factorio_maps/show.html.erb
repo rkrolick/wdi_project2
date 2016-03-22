@@ -1,4 +1,5 @@
 <h2><%=@factorio_map.name%></h2>
+<%=link_to "Download", @factorio_map.zip.url%>
 <h2>Comments</h2>
 <%@factorio_map.comments.each do |c|%>
   <div class="map_comment">

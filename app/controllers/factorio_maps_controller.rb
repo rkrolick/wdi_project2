@@ -33,7 +33,7 @@ class FactorioMapsController < ApplicationController
 
   private
   def map_params
-    params.require(:factorio_map).permit(:name)
+    params.require(:factorio_map).permit(:name, :zip)
   end
 
 end

@@ -14,6 +14,7 @@
   <%= form_for @factorio_map do |f| %>
     <%=f.label :name %>
     <%=f.text_field :name %>
+    <%=f.file_field :zip %>
     <%=f.submit %>
   <%end%>
 </div>
