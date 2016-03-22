@@ -11,6 +11,13 @@ class CommentsController < ApplicationController
     redirect_to @factorio_map
   end
 
+  def destroy
+    @factorio_map = FactorioMap.find(params[:factorio_map_id])
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to @factorio_map
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:comment_text)

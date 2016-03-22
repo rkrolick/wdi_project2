@@ -3,8 +3,9 @@
 <%@factorio_map.comments.each do |c|%>
   <div class="map_comment">
     <%=c.comment_text%>
+    <%=link_to "Delete Comment", [@factorio_map, c], method: :delete%>
   </div>
 <%end%>
-<%=link_to "Comment", new_factorio_map_comment_path(@factorio_map)%>
-<%=link_to "Delete", @factorio_map, method: :delete %>
-<%=link_to "Edit", edit_factorio_map_path %>
+<%=link_to "Add Comment", new_factorio_map_comment_path(@factorio_map)%>
+<%=link_to "Delete Map", @factorio_map, method: :delete %>
+<%=link_to "Edit Map", edit_factorio_map_path %>
