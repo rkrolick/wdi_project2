@@ -1,0 +1,8 @@
+<h1>Editing Comment</h1>
+<p>Original Message</p>
+<p><%=@comment.comment_text%></p>
+<%=form_for [@factorio_map, @comment] do |f|%>
+  <%=f.label :comment_text%>
+  <%=f.text_area :comment_text%>
+  <%=f.submit%>
+<%end%>

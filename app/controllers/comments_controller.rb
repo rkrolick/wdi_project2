@@ -11,6 +11,18 @@ class CommentsController < ApplicationController
     redirect_to @factorio_map
   end
 
+  def edit
+    @factorio_map = FactorioMap.find(params[:factorio_map_id])
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @factorio_map = FactorioMap.find(params[:factorio_map_id])
+    @comment = Comment.find(params[:id])
+    @comment.update!(comment_params)
+    redirect_to @factorio_map
+  end
+
   def destroy
     @factorio_map = FactorioMap.find(params[:factorio_map_id])
     @comment = Comment.find(params[:id])
