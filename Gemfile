@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Ryan's added gems
+gem 'devise'
 # For heroku
 gem 'rails_12factor', group: :production
 # For paperclip
