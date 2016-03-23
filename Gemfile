@@ -23,11 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
+# Ryan's added gems
 # For heroku
 gem 'rails_12factor', group: :production
 # For paperclip
 gem 'paperclip', '~> 4.3'
+# For accessing preview image of an uploaded map
+gem 'rubyzip', '>= 1.0.0', require: 'zip' # will load new rubyzip version
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

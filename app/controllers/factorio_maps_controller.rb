@@ -11,6 +11,7 @@ class FactorioMapsController < ApplicationController
 
   def create
     @factorio_map = FactorioMap.create!(map_params)
+    @factorio_map.extract_preview_img
     redirect_to @factorio_map
   end
 

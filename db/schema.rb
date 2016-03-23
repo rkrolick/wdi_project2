@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322203700) do
+ActiveRecord::Schema.define(version: 20160323202825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,10 @@ ActiveRecord::Schema.define(version: 20160322203700) do
     t.string   "zip_content_type"
     t.integer  "zip_file_size"
     t.datetime "zip_updated_at"
+    t.string   "img_url"
   end
+
+  add_index "factorio_maps", ["img_url"], name: "index_factorio_maps_on_img_url", using: :btree
 
   add_foreign_key "comments", "factorio_maps"
 end

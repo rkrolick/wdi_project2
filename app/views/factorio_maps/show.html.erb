@@ -1,4 +1,5 @@
 <h2><%=@factorio_map.name%></h2>
+<%=image_tag @factorio_map.img_url%>
 <%=link_to "Download", @factorio_map.zip.url%>
 <h2>Comments</h2>
 <%@factorio_map.comments.each do |c|%>
