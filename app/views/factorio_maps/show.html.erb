@@ -6,8 +6,10 @@
 <%@factorio_map.comments.each do |c|%>
   <div class="map_comment">
     <%=c.comment_text%>
-    <%=link_to "Delete Comment", [@factorio_map, c], method: :delete%>
-    <%=link_to "Edit Comment", edit_factorio_map_comment_path(@factorio_map,c)%>
+    <%if current_user%>
+      <%=link_to "Delete Comment", [@factorio_map, c], method: :delete%>
+      <%=link_to "Edit Comment", edit_factorio_map_comment_path(@factorio_map,c)%>
+    <%end%>
   </div>
 <%end%>
 <%if current_user %>
