@@ -1,4 +1,4 @@
-<h2>Maps</h2>
+<h1>Maps</h1>
 
 <div class="maps">
 <ul>
@@ -7,15 +7,17 @@
   <%end%>
 </ul>
 </div>
-<div class="upload">
-  <h1>Upload a map</h1>
-  <!-- How does this know to call create? -->
-  <!-- Rails knows this is a newly created factorio_map and routes it accordingly -->
-  <!-- Thanks Robin -->
-  <%= form_for @factorio_map do |f| %>
-    <%=f.label :name %>
-    <%=f.text_field :name %>
-    <%=f.file_field :zip %>
-    <%=f.submit %>
-  <%end%>
-</div>
+<% if current_user %>
+  <div class="upload">
+    <h1>Upload a map</h1>
+    <!-- How does this know to call create? -->
+    <!-- Rails knows this is a newly created factorio_map and routes it accordingly -->
+    <!-- Thanks Robin -->
+    <%= form_for @factorio_map do |f| %>
+      <%=f.label :name %>
+      <%=f.text_field :name %>
+      <%=f.file_field :zip %>
+      <%=f.submit %>
+    <%end%>
+  </div>
+<%end%>

@@ -1,7 +1,8 @@
-<h2><%=@factorio_map.name%></h2>
-<%=image_tag @factorio_map.img_url%>
+<h1><%=@factorio_map.name%></h1>
+<%=image_tag @factorio_map.img_url, size: "400"%>
+<br>
 <%=link_to "Download", @factorio_map.zip.url%>
-<h2>Comments</h2>
+<h1>Comments</h1>
 <%@factorio_map.comments.each do |c|%>
   <div class="map_comment">
     <%=c.comment_text%>
@@ -9,6 +10,8 @@
     <%=link_to "Edit Comment", edit_factorio_map_comment_path(@factorio_map,c)%>
   </div>
 <%end%>
-<%=link_to "Add Comment", new_factorio_map_comment_path(@factorio_map)%>
-<%=link_to "Delete Map", @factorio_map, method: :delete %>
-<%=link_to "Edit Map", edit_factorio_map_path %>
+<%if current_user %>
+  <%=link_to "Add Comment", new_factorio_map_comment_path(@factorio_map)%>
+  <%=link_to "Delete Map", @factorio_map, method: :delete %>
+  <%=link_to "Edit Map", edit_factorio_map_path %>
+<%end%>
