@@ -22,11 +22,12 @@ Allows users to upload/download saves for the game Factorio.  Uploaded zip files
 
 ---
 ### Installation
-Either goto: [Heroku link](http://factorio-map-share.herokuapp.com/factorio_maps)
+Either go to: [Heroku link](http://factorio-map-share.herokuapp.com/factorio_maps)
+
 Or clone this repo.
-- run rake db:drop db:create db:migrate db:seed
-- run rails s
-- In your browser of choice goto: [localhost:3000](localhost:3000)
+- run `rake db:drop db:create db:migrate db:seed`
+- run `rails s`
+- In your browser of choice go to: [localhost:3000](http://localhost:3000)
 
 ---
 ### Unsolved Problems
